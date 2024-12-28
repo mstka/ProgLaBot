@@ -6,14 +6,12 @@ MAX_CONNECTIONS = 10
 
 # クライアントごとの通信を処理する関数
 def handle_client(client_socket, client_address):
-    print(f"[INFO] Connected by {client_address}")
     try:
         while True:
             data = client_socket.recv(1024)  # データを受信 (最大1024バイト)
             if not data:
                 break  # 接続が切れた場合はループを抜ける
 
-            print(f"[INFO] Received from {client_address}: {data.decode('utf-8')}")
             client_socket.sendall(data)  # データをそのまま送り返す（おうむ返し）
     except Exception as e:
         print(f"[ERROR] {client_address}: {e}")
@@ -29,7 +27,6 @@ def main(IP_addr, port):
 
     server_socket.bind((IP_addr, port))
     server_socket.listen(MAX_CONNECTIONS)
-    print(f"[INFO] Server listening on {IP_addr}:{port}")
 
     # 接続を管理するスレッドリスト
     threads = []
