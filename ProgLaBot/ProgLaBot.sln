@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgLaBot", "ProgLaBot\ProgLaBot.csproj", "{672C5BB1-CE8B-4D69-9384-E523EF67F33B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgLaBot", "ProgLaBot\ProgLaBot.csproj", "{CA969897-6269-48C0-8310-BD0E8269084C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{672C5BB1-CE8B-4D69-9384-E523EF67F33B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{672C5BB1-CE8B-4D69-9384-E523EF67F33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{672C5BB1-CE8B-4D69-9384-E523EF67F33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{672C5BB1-CE8B-4D69-9384-E523EF67F33B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA969897-6269-48C0-8310-BD0E8269084C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA969897-6269-48C0-8310-BD0E8269084C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA969897-6269-48C0-8310-BD0E8269084C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA969897-6269-48C0-8310-BD0E8269084C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AB86951D-6D68-4F46-B3CB-ADFE790B7169}
+		SolutionGuid = {60958E31-8A04-4AF7-A387-85213B8B5BCE}
 	EndGlobalSection
 EndGlobal

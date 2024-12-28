@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{672C5BB1-CE8B-4D69-9384-E523EF67F33B}</ProjectGuid>
+    <ProjectGuid>{CA969897-6269-48C0-8310-BD0E8269084C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ProgLaBot</RootNamespace>
     <AssemblyName>ProgLaBot</AssemblyName>
@@ -36,7 +36,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeFile1.cs" />
+    <Compile Include="CodeFile1.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

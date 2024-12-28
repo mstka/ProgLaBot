@@ -1,91 +1,83 @@
 ﻿using System;
 using System.Drawing;
-using System.Net;
-using System.Net.Sockets;
-using System.Text;
-using Newtonsoft.Json;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using System.Collections.Generic;
 
-public class TcpServer
+public class GraphicsWithGui : Form
 {
-    private const int Port = 5000; // 使用するポート
-    private const string IpAddress = "127.0.0.1"; // サーバーIP（ローカルホスト）
+    private Button button;
+    private TextBox textBox;
+    private Panel drawingPanel;
 
-    // 受信したJSONデータを格納するための構造体
-    public class Coordinate
+    public GraphicsWithGui()
     {
-        public int X { get; set; }
-        public int Y { get; set; }
-    }
+        // ウィンドウ設定
+        this.Text = "Graphics and GUI Sample";
+        this.Size = new Size(800, 600);
 
-    private static void Main()
-    {
-        // フォームの設定
-        Form form = new Form();
-        form.Text = "座標表示";
-        form.Size = new Size(800, 600);
-
-        // タイマーを使って描画を更新
-        Timer timer = new Timer();
-        timer.Interval = 16; // 約60FPS
-        timer.Tick += (sender, e) => form.Invalidate();
-        timer.Start();
-
-        // TCPサーバーを開始
-        TcpListener listener = new TcpListener(IPAddress.Parse(IpAddress), Port);
-        listener.Start();
-
-        // 座標リスト
-        var coordinates = new List<Coordinate>();
-
-        // サーバースレッド
-        var serverThread = new System.Threading.Thread(() =>
+        // ボタン作成
+        button = new Button
         {
-            while (true)
-            {
-                var client = listener.AcceptTcpClient();
-                var stream = client.GetStream();
+            Text = "クリック",
+            Location = new Point(10, 10),
+            Size = new Size(100, 30)
+        };
+        button.Click += Button_Click;
 
-                byte[] buffer = new byte[1024];
-                int bytesRead;
-
-                // データ受信ループ
-                while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
-                {
-                    string json = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-
-                    // JSONデータをCoordinateオブジェクトにデシリアライズ
-                    try
-                    {
-                        var coord = JsonConvert.DeserializeObject<Coordinate>(json);
-                        coordinates.Add(coord);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("エラー: " + ex.Message);
-                    }
-                }
-
-                client.Close();
-            }
-        });
-
-        // サーバースレッド開始
-        serverThread.IsBackground = true;
-        serverThread.Start();
-
-        // 描画処理
-        form.Paint += (sender, e) =>
+        // テキストボックス作成
+        textBox = new TextBox
         {
-            foreach (var coord in coordinates)
-            {
-                e.Graphics.FillEllipse(Brushes.Red, coord.X - 10, coord.Y - 10, 20, 20); // 半径10の円を描画
-            }
+            Location = new Point(120, 10),
+            Size = new Size(200, 30)
         };
 
-        // フォームを表示
-        Application.Run(form);
+        // 描画パネル作成
+        drawingPanel = new Panel
+        {
+            Location = new Point(10, 50),
+            Size = new Size(760, 500),
+            BorderStyle = BorderStyle.FixedSingle
+        };
+        drawingPanel.Paint += DrawingPanel_Paint;
+
+        // コントロールをフォームに追加
+        this.Controls.Add(button);
+        this.Controls.Add(textBox);
+        this.Controls.Add(drawingPanel);
+    }
+
+    // ボタンクリック時のイベントハンドラ
+    private void Button_Click(object sender, EventArgs e)
+    {
+        string inputText = textBox.Text;
+        MessageBox.Show($"入力されたテキスト: {inputText}", "通知");
+        drawingPanel.Invalidate(); // 再描画
+    }
+
+    // 描画パネルの描画イベント
+    private void DrawingPanel_Paint(object sender, PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+
+        // 背景塗りつぶし
+        g.Clear(Color.White);
+
+        // シンプルな図形描画
+        Pen pen = new Pen(Color.Blue, 2);
+        Brush brush = new SolidBrush(Color.Red);
+
+        g.DrawRectangle(pen, 50, 50, 200, 100); // 青い枠の四角形
+        g.FillEllipse(brush, 300, 50, 100, 100); // 赤い塗りつぶしの円
+
+        // テキスト描画
+        Font font = new Font("Arial", 16);
+        g.DrawString("リッチなグラフィックの例", font, Brushes.Black, new PointF(50, 200));
+    }
+
+    [STAThread]
+    public static void Main()
+    {
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new GraphicsWithGui());
     }
 }
