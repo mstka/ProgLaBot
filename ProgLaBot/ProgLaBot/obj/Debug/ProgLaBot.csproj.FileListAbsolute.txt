@@ -2,7 +2,6 @@ C:\Users\cacas\Desktop\ProgLaBot\ProgLaBot\ProgLaBot\bin\Debug\ProgLaBot.exe.con
 C:\Users\cacas\Desktop\ProgLaBot\ProgLaBot\ProgLaBot\bin\Debug\ProgLaBot.exe
 C:\Users\cacas\Desktop\ProgLaBot\ProgLaBot\ProgLaBot\bin\Debug\ProgLaBot.pdb
 C:\Users\cacas\Desktop\ProgLaBot\ProgLaBot\ProgLaBot\obj\Debug\ProgLaBot.csproj.AssemblyReference.cache
-C:\Users\cacas\Desktop\ProgLaBot\ProgLaBot\ProgLaBot\obj\Debug\ProgLaBot.csproj.SuggestedBindingRedirects.cache
 C:\Users\cacas\Desktop\ProgLaBot\ProgLaBot\ProgLaBot\obj\Debug\ProgLaBot.csproj.CoreCompileInputs.cache
 C:\Users\cacas\Desktop\ProgLaBot\ProgLaBot\ProgLaBot\obj\Debug\ProgLaBot.exe
 C:\Users\cacas\Desktop\ProgLaBot\ProgLaBot\ProgLaBot\obj\Debug\ProgLaBot.pdb

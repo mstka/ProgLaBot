@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|c:\\users\\cacas\\desktop\\proglabot\\proglabot\\proglabot\\new_file_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\new_file_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|c:\\users\\cacas\\desktop\\proglabot\\proglabot\\proglabot\\new_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\new_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\proglabot\\codefile1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\codefile1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\proglabot\\codefile2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\codefile2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "New_File_2.cs",
+              "DocumentMoniker": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File_2.cs",
+              "RelativeDocumentMoniker": "ProgLaBot\\New_File_2.cs",
+              "ToolTip": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File_2.cs",
+              "RelativeToolTip": "ProgLaBot\\New_File_2.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T02:51:32.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "New_File.cs",
+              "DocumentMoniker": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File.cs",
+              "RelativeDocumentMoniker": "ProgLaBot\\New_File.cs",
+              "ToolTip": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File.cs",
+              "RelativeToolTip": "ProgLaBot\\New_File.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAIMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T13:58:40.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CodeFile2.cs",
+              "DocumentMoniker": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\CodeFile2.cs",
+              "RelativeDocumentMoniker": "ProgLaBot\\CodeFile2.cs",
+              "ToolTip": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\CodeFile2.cs",
+              "RelativeToolTip": "ProgLaBot\\CodeFile2.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAHEAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T04:55:31.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CodeFile1.cs",
+              "DocumentMoniker": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\CodeFile1.cs",
+              "RelativeDocumentMoniker": "ProgLaBot\\CodeFile1.cs",
+              "ToolTip": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\CodeFile1.cs",
+              "RelativeToolTip": "ProgLaBot\\CodeFile1.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAIAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-28T08:35:52.858Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

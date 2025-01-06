@@ -1,0 +1,3 @@
+C:\Users\cacas\Desktop\ProgLaBot\ProgLaBot_NEXT\ProgLaBot_NEXT\obj\Debug\ProgLaBot_NEXT.csproj.AssemblyReference.cache
+C:\Users\cacas\Desktop\ProgLaBot\ProgLaBot_NEXT\ProgLaBot_NEXT\obj\Debug\ProgLaBot_NEXT.csproj.SuggestedBindingRedirects.cache
+C:\Users\cacas\Desktop\ProgLaBot\ProgLaBot_NEXT\ProgLaBot_NEXT\obj\Debug\ProgLaBot_NEXT.csproj.CoreCompileInputs.cache

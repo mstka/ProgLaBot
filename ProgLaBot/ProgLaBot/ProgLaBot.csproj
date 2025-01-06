@@ -36,7 +36,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeFile1.cs">
+    <Compile Include="CodeFile1.cs" />
+    <Compile Include="CodeFile2.cs" />
+    <Compile Include="New_File.cs" />
+    <Compile Include="New_File_2.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
