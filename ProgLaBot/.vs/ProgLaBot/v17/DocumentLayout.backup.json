@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|c:\\users\\cacas\\desktop\\proglabot\\proglabot\\proglabot\\first_screen_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\first_screen_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|c:\\users\\cacas\\desktop\\proglabot\\proglabot\\proglabot\\new_file3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\new_file3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\proglabot\\new_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\new_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|c:\\users\\cacas\\desktop\\proglabot\\proglabot\\proglabot\\new_file_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\new_file_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|c:\\users\\cacas\\desktop\\proglabot\\proglabot\\proglabot\\new_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\new_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\proglabot\\codefile2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\codefile2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\proglabot\\codefile1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\codefile1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\proglabot\\codefile2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA969897-6269-48C0-8310-BD0E8269084C}|ProgLaBot\\ProgLaBot.csproj|solutionrelative:proglabot\\codefile2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,30 +34,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "New_File_2.cs",
-              "DocumentMoniker": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File_2.cs",
-              "RelativeDocumentMoniker": "ProgLaBot\\New_File_2.cs",
-              "ToolTip": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File_2.cs",
-              "RelativeToolTip": "ProgLaBot\\New_File_2.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAZAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "New_File3.cs",
+              "DocumentMoniker": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File3.cs",
+              "RelativeDocumentMoniker": "ProgLaBot\\New_File3.cs",
+              "ToolTip": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File3.cs",
+              "RelativeToolTip": "ProgLaBot\\New_File3.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAKYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T02:51:32.561Z",
+              "WhenOpened": "2025-01-07T12:11:26.747Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "First_Screen_.cs",
+              "DocumentMoniker": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\First_Screen_.cs",
+              "RelativeDocumentMoniker": "ProgLaBot\\First_Screen_.cs",
+              "ToolTip": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\First_Screen_.cs",
+              "RelativeToolTip": "ProgLaBot\\First_Screen_.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T13:04:01.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "New_File.cs",
               "DocumentMoniker": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File.cs",
               "RelativeDocumentMoniker": "ProgLaBot\\New_File.cs",
               "ToolTip": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File.cs",
               "RelativeToolTip": "ProgLaBot\\New_File.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAAAIMAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T13:58:40.596Z",
               "EditorCaption": ""
@@ -57,18 +78,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "New_File_2.cs",
+              "DocumentMoniker": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File_2.cs",
+              "RelativeDocumentMoniker": "ProgLaBot\\New_File_2.cs",
+              "ToolTip": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\New_File_2.cs",
+              "RelativeToolTip": "ProgLaBot\\New_File_2.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAAJoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T02:51:32.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CodeFile2.cs",
               "DocumentMoniker": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\CodeFile2.cs",
               "RelativeDocumentMoniker": "ProgLaBot\\CodeFile2.cs",
               "ToolTip": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\CodeFile2.cs",
               "RelativeToolTip": "ProgLaBot\\CodeFile2.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAHEAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T04:55:31.597Z"
+              "WhenOpened": "2024-12-29T04:55:31.597Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "CodeFile1.cs",
               "DocumentMoniker": "C:\\Users\\cacas\\Desktop\\ProgLaBot\\ProgLaBot\\ProgLaBot\\CodeFile1.cs",
               "RelativeDocumentMoniker": "ProgLaBot\\CodeFile1.cs",
