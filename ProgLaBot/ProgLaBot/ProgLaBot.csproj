@@ -36,11 +36,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base_Program.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CodeFile1.cs" />
     <Compile Include="CodeFile2.cs" />
+    <Compile Include="Home_Screen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="New_File3.cs" />
     <Compile Include="First_Screen_.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="New_File.cs" />
     <Compile Include="New_File_2.cs" />

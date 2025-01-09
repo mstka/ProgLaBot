@@ -1,59 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-
-public class MainForm : Form
-{
-    private Panel containerPanel;
-
-    public MainForm()
-    {
-        // フォームの初期設定
-        this.Text = "ProgLaBot";
-        this.StartPosition = FormStartPosition.CenterScreen;
-        this.BackColor = Color.White;
-        this.FormBorderStyle = FormBorderStyle.FixedSingle; // サイズ変更を無効化
-        this.MaximizeBox = false; // 最大化ボタンを無効化
-        //this.FormBorderStyle = FormBorderStyle.None;  // タイトルバーを非表示
-        //this.Icon = new Icon("path_to_icon.ico");
-
-        this.Size = new Size(400, 400);
-
-        // コンテナーパネルを作成し、子フォームを動的に切り替える
-        containerPanel = new Panel
-        {
-            Dock = DockStyle.Fill
-        };
-        this.Controls.Add(containerPanel);
-
-        // 初期状態ではLoginScreenを表示
-        ShowHomeScreen();
-    }
-
-    // ログイン画面を表示
-    public void ShowLoginScreen()
-    {
-        Console.WriteLine("Show_Login_Screen");
-        //this.Controls.Clear();  // 現在のコントロールをクリア
-        LoginScreen loginScreen = new LoginScreen(this);  // MainFormを渡す
-        
-        this.Controls.Add(containerPanel);  // コンテナーパネルを再追加
-        loginScreen.Dock = DockStyle.Fill;  // ログイン画面をパネルに合わせる
-        containerPanel.Controls.Add(loginScreen);
-    }
-
-    // ホーム画面を表示
-    public void ShowHomeScreen()
-    {
-        Console.WriteLine("Show_Home_Screen");
-        //this.Controls.Clear();  // 現在のコントロールをクリア
-        HomeScreen homeScreen = new HomeScreen(this);  // MainFormを渡す
-        
-        this.Controls.Add(containerPanel);  // コンテナーパネルを再追加
-        homeScreen.Dock = DockStyle.Fill;  // ホーム画面をパネルに合わせる
-        containerPanel.Controls.Add(homeScreen);
-    }
-}
 
 public class LoginScreen : UserControl
 {
@@ -64,6 +15,7 @@ public class LoginScreen : UserControl
     private Label usernameLabel;
     private Label passwordLabel;
     private PictureBox logoPictureBox;
+    private Button SignUp_Button;
 
     public LoginScreen(MainForm parentForm)
     {
@@ -73,7 +25,7 @@ public class LoginScreen : UserControl
         mainForm.Controls.Clear();
 
         // フォームサイズをログイン画面用に変更
-        mainForm.Size = new Size(400, 600);
+        mainForm.Size = new Size(400, 500);
 
 
         // ロゴ画像の表示
@@ -123,10 +75,10 @@ public class LoginScreen : UserControl
 
         loginButton = new Button
         {
-            Text = "Login",
-            Location = new Point(150, 250),
-            Size = new Size(100, 40),
-            Font = new Font("Arial", 10, FontStyle.Bold),
+            Text = "ログイン",
+            Location = new Point(70, 270),
+            Size = new Size(110, 50),
+            Font = new Font("Arial", 15, FontStyle.Bold),
             BackColor = Color.LightBlue,
             FlatStyle = FlatStyle.Flat
         };
@@ -139,6 +91,29 @@ public class LoginScreen : UserControl
         SetButtonRounded(loginButton);
 
         mainForm.Controls.Add(loginButton);
+
+
+
+        SignUp_Button = new Button
+        {
+            Text = "新規登録",
+            Location = new Point(230, 270),
+            Size = new Size(110, 50),
+            Font = new Font("Arial", 15, FontStyle.Bold), //FontStyle.Regular
+            BackColor = Color.LightBlue,
+            FlatStyle = FlatStyle.Flat
+        };
+        SignUp_Button.Click += LoginButton_Click; // クリックイベント
+
+        // ボタンを丸角にする
+        SignUp_Button.FlatStyle = FlatStyle.Flat;  // フラットスタイルに設定
+        SignUp_Button.FlatAppearance.BorderSize = 0; // 境界線を非表示に
+        SignUp_Button.BackColor = Color.LightBlue; // 背景色を設定
+        SetButtonRounded(SignUp_Button);
+
+        mainForm.Controls.Add(SignUp_Button);
+
+
     }
 
     // 丸角ボタンを設定するメソッド
@@ -171,66 +146,6 @@ public class LoginScreen : UserControl
         {
             MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        
-    }
-}
 
-public class HomeScreen : UserControl
-{
-    private MainForm mainForm;
-
-    public HomeScreen(MainForm parentForm)
-    {
-        mainForm = parentForm;
-
-        // 現在のコントロールをすべてクリア
-        mainForm.Controls.Clear();
-
-        // フォーム設定
-        mainForm.Size = new Size(400, 500);
-
-        // ホーム画面のUI設定
-        Label welcomeLabel = new Label
-        {
-            Text = "Welcome to the Home Screen!",
-            Font = new Font("Arial", 18),
-            Location = new Point(50, 100),
-            Size = new Size(300, 40)
-        };
-
-        Button logoutButton = new Button
-        {
-            Text = "Logout",
-            Font = new Font("Arial", 12),
-            Location = new Point(150, 200),
-            Size = new Size(100, 40)
-        };
-        logoutButton.Click += LogoutButton_Click;
-
-        mainForm.Controls.Add(welcomeLabel);
-        mainForm.Controls.Add(logoutButton);
-    }
-
-    private void LogoutButton_Click(object sender, EventArgs e)
-    {
-        // ログアウトしてログイン画面に戻る
-        mainForm.ShowLoginScreen();  // ログイン画面に遷移
-    }
-}
-
-// エントリーポイント
-class Core_Process
-{
-    public static void Main()
-    {
-        // 現在の参照パスをCUIに出力
-        string currentDirectory = Environment.CurrentDirectory;
-        Console.WriteLine($"Current Directory: {currentDirectory}");
-
-        Application.EnableVisualStyles();
-        Application.SetCompatibleTextRenderingDefault(false);
-
-        // LoginScreen クラスのインスタンスを作成してフォームを表示
-        Application.Run(new MainForm());
     }
 }
