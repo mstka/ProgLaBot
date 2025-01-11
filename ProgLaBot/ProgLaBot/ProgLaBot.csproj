@@ -41,6 +41,7 @@
     </Compile>
     <Compile Include="CodeFile1.cs" />
     <Compile Include="CodeFile2.cs" />
+    <Compile Include="communication.cs" />
     <Compile Include="Home_Screen.cs">
       <SubType>UserControl</SubType>
     </Compile>

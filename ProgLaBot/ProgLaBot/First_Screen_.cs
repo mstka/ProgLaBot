@@ -103,7 +103,7 @@ public class LoginScreen : UserControl
             BackColor = Color.LightBlue,
             FlatStyle = FlatStyle.Flat
         };
-        SignUp_Button.Click += LoginButton_Click; // クリックイベント
+        SignUp_Button.Click += SinUp_Button_Click; // クリックイベント
 
         // ボタンを丸角にする
         SignUp_Button.FlatStyle = FlatStyle.Flat;  // フラットスタイルに設定
@@ -131,6 +131,26 @@ public class LoginScreen : UserControl
     }
 
     private void LoginButton_Click(object sender, EventArgs e)
+    {
+        string username = usernameTextBox.Text;
+        string password = passwordTextBox.Text;
+
+
+        // ログイン成功条件
+        if (username == "admin" && password == "password")
+        {
+            MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // ログイン成功した場合
+            mainForm.ShowHomeScreen();  // ホーム画面に遷移
+        }
+        else
+        {
+            MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+    }
+
+    private void SinUp_Button_Click(object sender, EventArgs e)
     {
         string username = usernameTextBox.Text;
         string password = passwordTextBox.Text;

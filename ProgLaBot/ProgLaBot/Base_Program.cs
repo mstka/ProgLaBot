@@ -65,6 +65,9 @@ class Core_Process
         string currentDirectory = Environment.CurrentDirectory;
         Console.WriteLine($"Current Directory: {currentDirectory}");
 
+        //通信用オブジェクトを生成
+        TcpClientApp TCA = new TcpClientApp();
+
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
 
