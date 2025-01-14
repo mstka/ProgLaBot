@@ -41,12 +41,15 @@
     </Compile>
     <Compile Include="CodeFile1.cs" />
     <Compile Include="CodeFile2.cs" />
+    <Compile Include="Sign_Up_Screen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="communication.cs" />
     <Compile Include="Home_Screen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="New_File3.cs" />
-    <Compile Include="First_Screen_.cs">
+    <Compile Include="Login_Screen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="New_File.cs" />
@@ -55,6 +58,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>

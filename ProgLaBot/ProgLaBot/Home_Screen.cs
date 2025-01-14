@@ -20,7 +20,7 @@ public class HomeScreen : UserControl
         Label welcomeLabel = new Label
         {
             Text = "Welcome to the Home Screen!",
-            Font = new Font("Arial", 18),
+            Font = new Font("Yu Gothic", 18),
             Location = new Point(50, 100),
             Size = new Size(300, 40)
         };

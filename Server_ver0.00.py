@@ -12,7 +12,7 @@ def handle_client(client_socket, client_address):
             if not data:
                 break  # 接続が切れた場合はループを抜ける
 
-            client_socket.sendall(data)  # データをそのまま送り返す（おうむ返し）
+            client_socket.sendall('')  # データをそのまま送り返す（おうむ返し）
     except Exception as e:
         print(f"[ERROR] {client_address}: {e}")
     finally:
@@ -48,4 +48,4 @@ def main(IP_addr, port):
             t.join()
 
 if __name__ == "__main__":
-    main('127.0.0.1', 60000)
+    main('127.0.0.1', 50301)

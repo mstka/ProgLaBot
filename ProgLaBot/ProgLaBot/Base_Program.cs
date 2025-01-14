@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Management;
+using System.Security.Cryptography;
+using System.Text;
 
 public class MainForm : Form
 {
@@ -27,7 +30,7 @@ public class MainForm : Form
         this.Controls.Add(containerPanel);
 
         // 初期状態ではLoginScreenを表示
-        ShowHomeScreen();
+        ShowLoginScreen();
     }
 
     // ログイン画面を表示
@@ -53,20 +56,91 @@ public class MainForm : Form
         homeScreen.Dock = DockStyle.Fill;  // ホーム画面をパネルに合わせる
         containerPanel.Controls.Add(homeScreen);
     }
+
+    public void ShowSignUpScreen()
+    {
+        Console.WriteLine("Show_Home_Screen");
+        //this.Controls.Clear();  // 現在のコントロールをクリア
+        Sign_Up_Screen homeScreen = new Sign_Up_Screen(this);  // MainFormを渡す
+
+        this.Controls.Add(containerPanel);  // コンテナーパネルを再追加
+        homeScreen.Dock = DockStyle.Fill;  // ホーム画面をパネルに合わせる
+        containerPanel.Controls.Add(homeScreen);
+    }
 }
 
 
 // エントリーポイント
 class Core_Process
 {
+
+    /// <summary>
+    /// マザーボードのUUIDを取得する関数
+    /// </summary>
+    /// <returns>UUID文字列</returns>
+    static string GetMotherboardUUID()
+    {
+        try
+        {
+            string query = "SELECT UUID FROM Win32_ComputerSystemProduct";
+            using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(query))
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    return obj["UUID"]?.ToString();
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error in GetMotherboardUUID: " + ex.Message);
+        }
+        return null;
+    }
+
+    /// <summary>
+    /// 入力文字列からSHA256ハッシュ値を生成する関数
+    /// </summary>
+    /// <param name="input">ハッシュ化する文字列</param>
+    /// <returns>ハッシュ値の16進数表記</returns>
+    static string GetHash(string input)
+    {
+        try
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(input);
+                byte[] hashBytes = sha256.ComputeHash(bytes);
+
+                // バイト配列を16進数文字列に変換
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in hashBytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error in GetHash: " + ex.Message);
+            return null;
+        }
+    }
+
+
     public static void Main()
     {
+
+       // Console.WriteLine($"Current Directory: {GetMotherboardUUID()}");
+       //Console.WriteLine(GetHash(GetMotherboardUUID()));
+
         // 現在の参照パスをCUIに出力
         string currentDirectory = Environment.CurrentDirectory;
         Console.WriteLine($"Current Directory: {currentDirectory}");
 
         //通信用オブジェクトを生成
-        TcpClientApp TCA = new TcpClientApp();
+        //TcpClientApp TCA = new TcpClientApp();
 
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);

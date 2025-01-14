@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-public class LoginScreen : UserControl
+public class Sign_Up_Screen : UserControl
 {
     private MainForm mainForm;
     private TextBox usernameTextBox;
@@ -17,14 +17,14 @@ public class LoginScreen : UserControl
     private PictureBox logoPictureBox;
     private Button SignUp_Button;
 
-    public LoginScreen(MainForm parentForm)
+    public Sign_Up_Screen(MainForm parentForm)
     {
         mainForm = parentForm;
 
         // 現在のコントロールをすべてクリア
         mainForm.Controls.Clear();
 
-        // フォームサイズをログイン画面用に変更
+        // フォームサイズを変更
         mainForm.Size = new Size(400, 500);
 
 
@@ -40,10 +40,10 @@ public class LoginScreen : UserControl
 
         usernameLabel = new Label
         {
-            Text = "Username:",
+            Text = "ユーザー名:",
             Location = new Point(60, 150),
             AutoSize = true,
-            Font = new Font("Arial", 10, FontStyle.Bold)
+            Font = new Font("Yu Gothic", 10, FontStyle.Bold)
         };
         mainForm.Controls.Add(usernameLabel);
 
@@ -57,7 +57,7 @@ public class LoginScreen : UserControl
 
         passwordLabel = new Label
         {
-            Text = "Password:",
+            Text = "パスワード:",
             Location = new Point(60, 200),
             AutoSize = true,
             Font = new Font("Arial", 10, FontStyle.Bold)
@@ -73,21 +73,37 @@ public class LoginScreen : UserControl
         };
         mainForm.Controls.Add(passwordTextBox);
 
+        Label mailAddressLabel = new Label
+        {
+            Text = "メールアドレス:",
+            Location = new Point(60, 250),
+            AutoSize = true,
+            Font = new Font("Arial", 10, FontStyle.Bold)
+        };
+        mainForm.Controls.Add(mailAddressLabel);
+
+        TextBox mailAddress_TextBox = new TextBox
+        {
+            Location = new Point(160, 245),
+            Size = new Size(180, 30),
+            Font = new Font("Arial", 10)
+        };
+        mainForm.Controls.Add(mailAddress_TextBox);
+
         loginButton = new Button
         {
-            Text = "ログイン",
-            Location = new Point(70, 270),
-            Size = new Size(110, 50),
-            Font = new Font("Arial", 15, FontStyle.Bold),
+            Text = "新規登録",
+            Location = new Point(70, 320),
+            Size = new Size(250, 50),
+            Font = new Font("Yu Gothic", 15, FontStyle.Bold),
             BackColor = Color.LightBlue,
             FlatStyle = FlatStyle.Flat
         };
-        loginButton.Click += LoginButton_Click; // クリックイベント
+        loginButton.Click += SignUp_Button_Click; // クリックイベント
 
         // ボタンを丸角にする
         loginButton.FlatStyle = FlatStyle.Flat;  // フラットスタイルに設定
         loginButton.FlatAppearance.BorderSize = 0; // 境界線を非表示に
-        loginButton.BackColor = Color.LightBlue; // 背景色を設定
         SetButtonRounded(loginButton);
 
         mainForm.Controls.Add(loginButton);
@@ -96,19 +112,18 @@ public class LoginScreen : UserControl
 
         SignUp_Button = new Button
         {
-            Text = "新規登録",
-            Location = new Point(230, 270),
-            Size = new Size(110, 50),
-            Font = new Font("Arial", 15, FontStyle.Bold), //FontStyle.Regular
-            BackColor = Color.LightBlue,
+            Text = "ログイン画面へ",
+            Location = new Point(135, 400),
+            Size = new Size(120, 35),
+            Font = new Font("Yu Gothic", 10, FontStyle.Regular), //FontStyle.Regular
+            BackColor = Color.Wheat,
             FlatStyle = FlatStyle.Flat
         };
-        SignUp_Button.Click += SinUp_Button_Click; // クリックイベント
+        SignUp_Button.Click += LoginButton_Click; // クリックイベント
 
         // ボタンを丸角にする
         SignUp_Button.FlatStyle = FlatStyle.Flat;  // フラットスタイルに設定
         SignUp_Button.FlatAppearance.BorderSize = 0; // 境界線を非表示に
-        SignUp_Button.BackColor = Color.LightBlue; // 背景色を設定
         SetButtonRounded(SignUp_Button);
 
         mainForm.Controls.Add(SignUp_Button);
@@ -132,25 +147,10 @@ public class LoginScreen : UserControl
 
     private void LoginButton_Click(object sender, EventArgs e)
     {
-        string username = usernameTextBox.Text;
-        string password = passwordTextBox.Text;
-
-
-        // ログイン成功条件
-        if (username == "admin" && password == "password")
-        {
-            MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            // ログイン成功した場合
-            mainForm.ShowHomeScreen();  // ホーム画面に遷移
-        }
-        else
-        {
-            MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
+        mainForm.ShowLoginScreen();  // ホーム画面に遷移
     }
 
-    private void SinUp_Button_Click(object sender, EventArgs e)
+    private void SignUp_Button_Click(object sender, EventArgs e)
     {
         string username = usernameTextBox.Text;
         string password = passwordTextBox.Text;
