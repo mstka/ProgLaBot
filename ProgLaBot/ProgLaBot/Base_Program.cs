@@ -17,6 +17,8 @@ public class MainForm : Form
         this.BackColor = Color.White;
         this.FormBorderStyle = FormBorderStyle.FixedSingle; // サイズ変更を無効化
         this.MaximizeBox = false; // 最大化ボタンを無効化
+        // ダブルバッファリングを有効化（ちらつき防止）
+        this.DoubleBuffered = true;
         //this.FormBorderStyle = FormBorderStyle.None;  // タイトルバーを非表示
         //this.Icon = new Icon("path_to_icon.ico");
 
@@ -30,7 +32,8 @@ public class MainForm : Form
         this.Controls.Add(containerPanel);
 
         // 初期状態ではLoginScreenを表示
-        ShowLoginScreen();
+        Show_Main_Simulation();
+        //ShowLoginScreen();
     }
 
     // ログイン画面を表示
@@ -66,6 +69,17 @@ public class MainForm : Form
         this.Controls.Add(containerPanel);  // コンテナーパネルを再追加
         homeScreen.Dock = DockStyle.Fill;  // ホーム画面をパネルに合わせる
         containerPanel.Controls.Add(homeScreen);
+    }
+
+    public void Show_Main_Simulation()
+    {
+        Console.WriteLine("Show_Main_Simulation");
+        //this.Controls.Clear();  // 現在のコントロールをクリア
+        Main_Simulation main_simulation = new Main_Simulation(this);  // MainFormを渡す
+
+        this.Controls.Add(containerPanel);  // コンテナーパネルを再追加
+        main_simulation.Dock = DockStyle.Fill;  // ホーム画面をパネルに合わせる
+        containerPanel.Controls.Add(main_simulation);
     }
 }
 

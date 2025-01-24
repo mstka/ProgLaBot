@@ -41,6 +41,9 @@
     </Compile>
     <Compile Include="CodeFile1.cs" />
     <Compile Include="CodeFile2.cs" />
+    <Compile Include="Main_Simulation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Sign_Up_Screen.cs">
       <SubType>UserControl</SubType>
     </Compile>
